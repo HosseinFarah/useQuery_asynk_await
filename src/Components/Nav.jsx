@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Nav = () => {
   return (
@@ -16,15 +16,15 @@ export const Nav = () => {
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
-          <Link className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" to="/" style={({isActive})=>{return{color:isActive?"red":""}}}>
             {" "}
             Home
-          </Link>
-          <Link className="navbar-brand" to="/about">
+          </NavLink>
+          <NavLink className="navbar-brand" to="/about" style={({isActive})=>{return{color:isActive?"red":""}}}>
             {" "}
             About
-          </Link>
-          <Link className="navbar-brand" to="/books">Universities</Link>
+          </NavLink>
+          <NavLink className="navbar-brand" to="/books" style={({isActive})=>{return{color:isActive?"red":""}}}>Universities</NavLink>
         </ul>
       </div>
     </nav>
